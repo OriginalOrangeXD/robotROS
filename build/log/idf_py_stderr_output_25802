@@ -1,0 +1,1 @@
+ninja: error: '/home/robby/esp/micro_ros_espidf_component/libmicroros.a', needed by 'int32_publisher.elf', missing and no known rule to make it

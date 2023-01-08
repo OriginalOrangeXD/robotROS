@@ -1,0 +1,104 @@
+Compiler supported targets: xtensa-esp32-elf
+
+--- stderr: rcutils
+CMake Error at CMakeLists.txt:22 (find_package):
+  By not providing "Findament_cmake_python.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "ament_cmake_python", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "ament_cmake_python" with any of the following names:
+
+    ament_cmake_pythonConfig.cmake
+    ament_cmake_python-config.cmake
+
+  Add the installation prefix of "ament_cmake_python" to CMAKE_PREFIX_PATH or
+  set "ament_cmake_python_DIR" to a directory containing one of the above
+  files.  If "ament_cmake_python" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+---
+Failed   <<< rcutils [0.78s, exited with code 1]
+--- stderr: rosidl_typesupport_interface
+CMake Error at CMakeLists.txt:5 (find_package):
+  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "ament_cmake", but CMake did not find one.
+
+  Could not find a package configuration file provided by "ament_cmake" with
+  any of the following names:
+
+    ament_cmakeConfig.cmake
+    ament_cmake-config.cmake
+
+  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+  "ament_cmake_DIR" to a directory containing one of the above files.  If
+  "ament_cmake" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+---
+Failed   <<< rosidl_typesupport_interface [0.77s, exited with code 1]
+--- stderr: rmw_implementation_cmake
+CMake Error at CMakeLists.txt:5 (find_package):
+  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "ament_cmake", but CMake did not find one.
+
+  Could not find a package configuration file provided by "ament_cmake" with
+  any of the following names:
+
+    ament_cmakeConfig.cmake
+    ament_cmake-config.cmake
+
+  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+  "ament_cmake_DIR" to a directory containing one of the above files.  If
+  "ament_cmake" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+---
+Failed   <<< rmw_implementation_cmake [0.76s, exited with code 1]
+--- stderr: tracetools
+CMake Error at CMakeLists.txt:15 (find_package):
+  By not providing "Findament_cmake_ros.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "ament_cmake_ros", but CMake did not find one.
+
+  Could not find a package configuration file provided by "ament_cmake_ros"
+  with any of the following names:
+
+    ament_cmake_rosConfig.cmake
+    ament_cmake_ros-config.cmake
+
+  Add the installation prefix of "ament_cmake_ros" to CMAKE_PREFIX_PATH or
+  set "ament_cmake_ros_DIR" to a directory containing one of the above files.
+  If "ament_cmake_ros" provides a separate development package or SDK, be
+  sure it has been installed.
+
+
+---
+Failed   <<< tracetools [0.76s, exited with code 1]
+--- stderr: test_interface_files
+CMake Error at CMakeLists.txt:5 (find_package):
+  By not providing "Findament_cmake_core.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "ament_cmake_core", but CMake did not find one.
+
+  Could not find a package configuration file provided by "ament_cmake_core"
+  with any of the following names:
+
+    ament_cmake_coreConfig.cmake
+    ament_cmake_core-config.cmake
+
+  Add the installation prefix of "ament_cmake_core" to CMAKE_PREFIX_PATH or
+  set "ament_cmake_core_DIR" to a directory containing one of the above
+  files.  If "ament_cmake_core" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+---
+Failed   <<< test_interface_files [0.75s, exited with code 1]
+make: *** [libmicroros.mk:87: /home/robby/esp/micro_ros_espidf_component/micro_ros_src/install] Error 1
+ninja: error: '/home/robby/esp/micro_ros_espidf_component/libmicroros.a', needed by 'int32_publisher.elf', missing and no known rule to make it
