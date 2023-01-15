@@ -1,12 +1,16 @@
+// Basic linux imports
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
 
+//ESP32 imports I think
+//ROTS KERNEL for microcontrollers
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
 #include "esp_system.h"
 
+// ROS stuff
 #include <uros_network_interfaces.h>
 #include <rcl/rcl.h>
 #include <rcl/error_handling.h>
@@ -14,6 +18,7 @@
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
 
+//Check for certian middleware
 #ifdef CONFIG_MICRO_ROS_ESP_XRCE_DDS_MIDDLEWARE
 #include <rmw_microros/rmw_microros.h>
 #endif
@@ -24,11 +29,14 @@
 rcl_publisher_t publisher;
 std_msgs__msg__Int32 msg;
 
+// Function that will be by ROS node
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {
+//Macro for linter to not output error
 	RCLC_UNUSED(last_call_time);
 	if (timer != NULL) {
 		printf("Publishing From microcontroller: %d\n", msg.data);
+        //publish msg
 		RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
 		msg.data++;
 	}
